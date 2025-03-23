@@ -9,7 +9,7 @@ This is my first ever DIY project with ESP Home as well as first entry in Github
 - **Emulates button presses** for:
   - `1` (Required to press when you're trying to open door without anyone calling you)
   - `Lock` (Opening the door)
-  - `Headset Pickup` (Simulating lifting the intercom handset)
+  - `Handset Pickup` (Simulating lifting the intercom handset)
 - **ESPHome-powered** for seamless Home Assistant integration
 - **WiFi connectivity** for remote control
 - **Stable operation** with state restoration and boot flicker prevention
@@ -235,7 +235,7 @@ mode: single
 4. Connect to WiFi and add the device to Home Assistant.
 5. Test by triggering the relays.
 6. Wire the relays to the Tesla Stropkov intercom. Make sure you are wiring relays to a NO (normally open) position (I've used twisted pairs from a leftover UTP cable).
-7. Use helper to change switch entity of a Relay_1 `Headset Pickup` to a lock entity
+7. Use helper to change switch entity of a Relay_1 `Handset Pickup` to a lock entity
 8. Use provided automation (or edit it to your needs) to automate relay switching for automatic unlocking. 
 
 ---
