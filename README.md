@@ -12,7 +12,6 @@ This is my first ever DIY project with ESP Home as well as first entry in Github
   - `Headset Pickup` (Simulating lifting the intercom handset)
 - **ESPHome-powered** for seamless Home Assistant integration
 - **WiFi connectivity** for remote control
-- **Physical modifications** to the intercom needed
 - **Stable operation** with state restoration and boot flicker prevention
 
 
@@ -116,6 +115,117 @@ button:
 ## 🎮 Home Assistant Integration
 Once ESPHome is flashed and running, Home Assistant will automatically detect the device. You can control the relays via the HA dashboard or automations.
 
+## YAML for Homeassistant automation
+```yaml
+alias: Tesla 2-bus opener
+description: ""
+triggers:
+  - trigger: state
+    entity_id:
+      - lock.tesla_2bus_opener_sluchatko
+    to: unlocked
+conditions: []
+actions:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 500
+  - action: switch.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.tesla_2bus_opener_tla_tko_1
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 100
+  - action: switch.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.tesla_2bus_opener_tla_tko_1
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 500
+  - action: switch.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.tesla_2bus_opener_tla_tko_z_mek
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 100
+  - action: switch.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.tesla_2bus_opener_tla_tko_z_mek
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 500
+  - action: switch.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.tesla_2bus_opener_tla_tko_z_mek
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 100
+  - action: switch.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.tesla_2bus_opener_tla_tko_z_mek
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 500
+  - action: switch.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.tesla_2bus_opener_tla_tko_z_mek
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 0
+      milliseconds: 100
+  - action: switch.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.tesla_2bus_opener_tla_tko_z_mek
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 10
+      milliseconds: 0
+  - action: switch.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+        - switch.tesla_2bus_opener_tla_tko_1
+        - switch.tesla_2bus_opener_tla_tko_z_mek
+  - action: lock.lock
+    metadata: {}
+    data: {}
+    target:
+      entity_id: lock.tesla_2bus_opener_sluchatko
+mode: single
+```
+
 ---
 
 ## 🏗️ Installation
@@ -139,6 +249,7 @@ Feel free to open issues or submit pull requests to improve the project!
 ---
 
 ## ⚠️ Disclaimer
+This is not plug and play solution. Some soldering to a original intercom board is required. You are doing this at your own risk!
 This project is intended for educational and personal use. Ensure compliance with any local regulations before modifying intercom systems.
 
 ---
