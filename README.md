@@ -230,16 +230,40 @@ mode: single
 
 ## 🏗️ Installation
 1. Flash ESPHome firmware to the D1 Mini.
-2. Wire the relays to the Tesla Stropkov intercom. Make sure you are wiring relays to a NO (normally open) position (I've used twisted pairs from a leftover UTP cable).
-3. Connect to WiFi and add the device to Home Assistant.
-4. Test by triggering the relays.
-5. Use helper to change switch entity of a Relay_1 `Headset Pickup` to a lock entity
-6. Use provided automation (or edit it to your needs) to automate relay switching for automatic unlocking. 
+2. Connect `5V` and `G` pins on the D1 mini board to the `VCC` and `GND` pins on relay board.
+3. Connect `D1` to `IN1`, `D7` to `IN2`, `D6` to `IN3` and `D5` to `IN4` pins.
+4. Connect to WiFi and add the device to Home Assistant.
+5. Test by triggering the relays.
+6. Wire the relays to the Tesla Stropkov intercom. Make sure you are wiring relays to a NO (normally open) position (I've used twisted pairs from a leftover UTP cable).
+7. Use helper to change switch entity of a Relay_1 `Headset Pickup` to a lock entity
+8. Use provided automation (or edit it to your needs) to automate relay switching for automatic unlocking. 
 
 ---
 
 ## 📸 Screenshots
-*(Add images of the setup, wiring, and Home Assistant UI here)*
+**Intercom board wiring**
+
+
+<img src="./images/IMG_1433.jpeg" alt="Wiring Diagram" width="700">
+
+
+**D1 mini pinout**
+
+
+<img src="./images/IMG_1429.jpeg" alt="Wiring Diagram" width="700"> 
+
+**Final wiring**
+
+<img src="./images/IMG_1434.jpeg" alt="Wiring Diagram" width="700">
+
+**Assembled with a case**
+
+<img src="./images/IMG_1439.jpeg" alt="Wiring Diagram" width="700">
+
+<img src="./images/IMG_1440.jpeg" alt="Wiring Diagram" width="700">
+
+<img src="./images/IMG_1441.jpeg" alt="Wiring Diagram" width="700">
+
 
 ---
 
