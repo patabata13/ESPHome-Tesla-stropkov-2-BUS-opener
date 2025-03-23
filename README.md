@@ -230,7 +230,7 @@ mode: single
 
 ## 🏗️ Installation
 1. Flash ESPHome firmware to the D1 Mini.
-2. Wire the relays to the Tesla Stropkov intercom (I've used twisted pairs from a leftover UTP cable).
+2. Wire the relays to the Tesla Stropkov intercom. Make sure you are wiring relays to a NO (normally open) position (I've used twisted pairs from a leftover UTP cable).
 3. Connect to WiFi and add the device to Home Assistant.
 4. Test by triggering the relays.
 5. Use helper to change switch entity of a Relay_1 `Headset Pickup` to a lock entity
