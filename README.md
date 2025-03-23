@@ -23,7 +23,7 @@ This is my first ever DIY project with ESP Home as well as first entry in Github
 | [4-Channel Relay Module](https://www.laskakit.cz/4-kanaly-rele-modul-5vdc-250vac-10a/) | Controls button press simulation |
 | Tesla Stropkov 2Bus Intercom | Target intercom system (my model is Elegant, but it should work with others) |
 | Wires & Connectors | For wiring the relay to the intercom |
-| 3D printer | For a case (3D model available for download) |
+| 3D printer | For a case [Download here](https://www.printables.com/model/1240245-tesla-stropkov-2-bus-esp-home-opener-case) |
 
 ---
 
